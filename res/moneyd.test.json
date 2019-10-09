@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "uplinks": {
+      "xrp": {
+        "relation": "parent",
+        "plugin": "/usr/lib/node_modules/moneyd-uplink-xrp/node_modules/ilp-plugin-xrp-asym-client/index.js",
+        "assetCode": "XRP",
+        "assetScale": 6,
+        "balance": {
+          "minimum": "-Infinity",
+          "maximum": "20000",
+          "settleThreshold": "5000",
+          "settleTo": "10000"
+        },
+        "options": {
+          "server": "btp+wss://:8df66f2f2fe224659581403baf6995bfbd5d5e4e053e3b0fc28d27e8ad4ffa3c@amundsen.ilpdemo.org:1811",
+          "secret": "shU5HcWTQuHCMRohgjp3YujiiAsVL",
+          "address": "rfEMkEr9ZTQt5wmKuYmSBNibg2vmkzHBiM",
+          "xrpServer": "wss://s.altnet.rippletest.net:51233"
+        }
+      }
+    }
+  }

@@ -1,0 +1,12 @@
+{
+    "manifest": {
+      "name": "gambling",
+      "version": "1.0.0",
+      "machine": "small",
+      "port": "3010",
+      "containers": [{
+        "id": "app",
+        "image": "ibanfi/gambling"
+      }]
+    }
+   }

@@ -1,0 +1,17 @@
+[Unit]
+Description=Codiusd
+After=network.target nss-lookup.target
+[Service]
+ExecStart=/usr/bin/codiusd
+Environment="DEBUG=*"
+Environment="CODIUS_PUBLIC_URI=https://codius-vm"
+Environment="NODE_TLS_REJECT_UNAUTHORIZED=0"
+WorkingDirectory=/usr/lib/node_modules/codiusd
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=codiusd
+User=root
+Group=root
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,40 @@
+{
+  "description": "Codius State File which is generated from the provided codius.json, codiusvars.json, and codiushosts.json files.",
+  "manifestHash": "dfim63qn7nmtmiezzmwudro7gius72r5nwazk353dodqgjqh7lva",
+  "generatedManifest": {
+    "manifest": {
+      "name": "gambling",
+      "version": "1.0.0",
+      "machine": "small",
+      "port": "3010",
+      "containers": [
+        {
+          "id": "app",
+          "image": "ibanfi/gambling@sha256:5e1d7bf0463a2a600d613e9a91aba100cea85d3666c154fdc018c9a772808e35"
+        }
+      ]
+    }
+  },
+  "options": {
+    "maxMonthlyRate": 10,
+    "units": "XRP",
+    "duration": 600
+  },
+  "hostList": [
+    "https://codius-vm"
+  ],
+  "status": {
+    "hostDetails": {
+      "https://codius-vm": {
+        "url": "https://dfim63qn7nmtmiezzmwudro7gius72r5nwazk353dodqgjqh7lva.codius-vm/",
+        "expirationDate": "10-09-2019 17:53:39 +0000",
+        "price": {
+          "totalPaid": "2284",
+          "lastPaid": "2284",
+          "units": "nXRP"
+        }
+      }
+    },
+    "cronJobs": []
+  }
+}
