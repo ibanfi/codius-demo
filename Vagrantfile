@@ -5,6 +5,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.synced_folder "src", "/home/vagrant/src"
   config.vm.network "forwarded_port", guest: 3010, host: 3010
+  config.vm.network "forwarded_port", guest: 7770, host: 7770
 
    config.vm.provider "virtualbox" do |vb|
   # OSX workaround - disable microphone access

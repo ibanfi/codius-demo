@@ -1,0 +1,24 @@
+Prerequisites
+
+1. vagrant
+
+Build environment
+
+1. cd codius-demo
+2. vagrant up
+
+Use environment
+
+vagrant ssh
+
+Stop/start environment
+
+vagrant halt/vagrant up
+
+Remove environment
+
+vagrant destroy
+
+TODO: dockerize moneyd, codiusd(?), codius(?)
+TODO: create spsp server (in docker)
+TODO: use docker-compose for the full env

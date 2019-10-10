@@ -1,0 +1,9 @@
+FROM node:10
+WORKDIR /usr/src/app
+
+RUN yarn global add moneyd moneyd-uplink-xrp moneyd-gui
+
+EXPOSE 7769
+EXPOSE 7770
+
+CMD ["moneyd","local", "--admin-api-port", "7769"]
