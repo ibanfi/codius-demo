@@ -27,7 +27,7 @@ vagrant up
 
 ```
 vagrant ssh
-cd src/demo
+cd src/demo/
 cargo run
 ```
 
