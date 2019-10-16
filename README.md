@@ -31,6 +31,8 @@ cd src/demo/
 cargo run
 ```
 
-TODO: dockerize moneyd, codiusd(?), codius(?)
-TODO: create spsp server (in docker)
-TODO: use docker-compose for the full env
+### Todo
+- dockerizing moneyd, codiusd(?), codius(?)
+- creating spsp server (in docker)
+- using docker-compose for the full env
+
