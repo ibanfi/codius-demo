@@ -2,8 +2,15 @@ FROM node:10
 WORKDIR /usr/src/app
 
 RUN yarn global add moneyd moneyd-uplink-xrp moneyd-gui
+RUN sed -i 's/127.0.0.1/0.0.0.0/g' /usr/local/share/.config/yarn/global/node_modules/moneyd-gui/src/app.js
 
-EXPOSE 7769
 EXPOSE 7770
+EXPOSE 7768
 
-CMD ["moneyd","local", "--admin-api-port", "7769"]
+RUN echo "#!/bin/bash\n \
+nohup moneyd local --admin-api-port 7769 & \n\
+moneyd-gui \n" > ./start-moneyd.sh
+
+RUN chmod +x ./start-moneyd.sh
+
+ENTRYPOINT ["./start-moneyd.sh"]

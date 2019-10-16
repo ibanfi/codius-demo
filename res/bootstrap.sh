@@ -3,6 +3,10 @@
 # Set prompt
 echo "export PS1=\"\[\e[1;32m\]\h:\W $\[\e[0m\] \"" >> .bash_profile
 
+# Set LANG environments
+echo "LANG=en_US.utf-8" > /etc/environment
+echo "LC_ALL=en_US.utf-8" >> /etc/environment
+
 # Install yum-config-manager
 yum install -y yum-utils
 

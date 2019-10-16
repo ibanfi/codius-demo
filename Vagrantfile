@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "codius-vm"
   config.vm.define "codius-vm"
 
-  config.vm.synced_folder "src", "/home/vagrant/src"
+  config.vm.synced_folder "rust-src", "/home/vagrant/src"
   config.vm.network "forwarded_port", guest: 3010, host: 3010
   config.vm.network "forwarded_port", guest: 7770, host: 7770
 
@@ -17,6 +17,8 @@ Vagrant.configure("2") do |config|
 
    config.vm.provision "bootstrap", type: "shell", path: "res/bootstrap.sh"
   
+   config.vm.provision "rust", type: "shell", path: "res/install-rust.sh", privileged: false
+
    config.vm.provision "hyperd", type: "shell", path: "res/install-hyperd.sh"
 
    config.vm.provision "codiusd", type: "shell", path: "res/install-codiusd.sh"

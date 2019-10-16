@@ -1,23 +1,35 @@
-Prerequisites
+# Rust POC
+## Prerequisites
 
-1. vagrant
+1. Install vagrant: https://www.vagrantup.com/downloads.html
+2. Clone the repository: `git clone https://github.com/ibanfi/codius-demo.git`
 
-Build environment
+## Build environment
 
-1. cd codius-demo
-2. vagrant up
+```
+cd codius-demo
+vagrant up
+```
 
-Use environment
+## Use the environment (connect to vm)
 
+`vagrant ssh`
+
+## Stop/start environment
+
+`vagrant halt/vagrant up`
+
+## Remove entire environment
+
+`vagrant destroy`
+
+## Run Rust POC apps
+
+```
 vagrant ssh
-
-Stop/start environment
-
-vagrant halt/vagrant up
-
-Remove environment
-
-vagrant destroy
+cd src/demo
+cargo run
+```
 
 TODO: dockerize moneyd, codiusd(?), codius(?)
 TODO: create spsp server (in docker)

@@ -1,0 +1,10 @@
+FROM node:10
+WORKDIR /usr/src/app
+
+RUN yarn global add moneyd-gui
+
+RUN sed -i 's/127.0.0.1/0.0.0.0/g' /usr/local/share/.config/yarn/global/node_modules/moneyd-gui/src/app.js
+
+EXPOSE 7770
+
+CMD ["moneyd-gui"]
