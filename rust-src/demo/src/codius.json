@@ -1,0 +1,12 @@
+{
+    "manifest": {
+      "name": "rust-demo",
+      "version": "1.0.0",
+      "machine": "small",
+      "port": "3020",
+      "containers": [{
+        "id": "app",
+        "image": "ibanfi/rust-demo"
+      }]
+    }
+   }

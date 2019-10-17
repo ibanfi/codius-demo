@@ -1,0 +1,40 @@
+{
+  "description": "Codius State File which is generated from the provided codius.json, codiusvars.json, and codiushosts.json files.",
+  "manifestHash": "oipabtoox5gaxqtypukbuafojynhwcyp6xgk3kwllafll62nhinq",
+  "generatedManifest": {
+    "manifest": {
+      "name": "rust-demo",
+      "version": "1.0.0",
+      "machine": "small",
+      "port": "3020",
+      "containers": [
+        {
+          "id": "app",
+          "image": "ibanfi/rust-demo@sha256:3c5454f237836e7ddd5fb6a2757a785dd0861afa073086f0635eb2656741c359"
+        }
+      ]
+    }
+  },
+  "options": {
+    "maxMonthlyRate": 10,
+    "units": "XRP",
+    "duration": 600
+  },
+  "hostList": [
+    "https://codius-vm"
+  ],
+  "status": {
+    "hostDetails": {
+      "https://codius-vm": {
+        "url": "https://oipabtoox5gaxqtypukbuafojynhwcyp6xgk3kwllafll62nhinq.codius-vm/",
+        "expirationDate": "10-17-2019 18:22:45 +0000",
+        "price": {
+          "totalPaid": "2284",
+          "lastPaid": "2284",
+          "units": "nXRP"
+        }
+      }
+    },
+    "cronJobs": []
+  }
+}

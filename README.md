@@ -31,8 +31,22 @@ cd src/demo/
 cargo run
 ```
 
+### Build and install rust-demo
+
+```
+vagrant ssh
+cd src/demo/src
+// This is optional, the container has been pushed to the repo
+docker build -t ibanfi/rust-demo .
+docker push
+./upload.sh
+
+```
 ### Todo
 - dockerizing moneyd, codiusd(?), codius(?)
 - creating spsp server (in docker)
 - using docker-compose for the full env
+
+- Solve hard linking problem during build (set target directory to local FS)
+- Make resolv.conf readonly
 

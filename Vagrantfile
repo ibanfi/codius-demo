@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "codius-vm"
   config.vm.define "codius-vm"
 
-  config.vm.synced_folder "rust-src", "/home/vagrant/src"
+  config.vm.synced_folder "rust-src", "/home/vagrant/projects/src"
   config.vm.network "forwarded_port", guest: 3010, host: 3010
   config.vm.network "forwarded_port", guest: 7770, host: 7770
 

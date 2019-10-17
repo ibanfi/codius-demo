@@ -1,0 +1,5 @@
+.gitignore
+target
+Dockerfile
+codius.json
+codiusvars.json
