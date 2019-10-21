@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "8177b418-9de9-4faf-b5e4-3265f7926a66",
+		"name": "ILP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://ibanfi.localtunnel.me/accounts",
+					"protocol": "https",
+					"host": [
+						"ibanfi",
+						"localtunnel",
+						"me"
+					],
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostname}}/",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get accounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostname}}/accounts/",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"accounts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Default SPSP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostname}}/.well-known/pay",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						".well-known",
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get rates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostname}}/rates",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"rates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get routes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostname}}/routes",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"routes"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "193ce859-4c3f-4c34-8b33-a4d9eafc3489",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8ecabf6a-881e-451d-98b1-f8af19b26312",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
